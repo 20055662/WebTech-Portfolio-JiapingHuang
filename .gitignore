@@ -1,6 +1,7 @@
 ### Add your supplemental ignored files below this line
-### Added by .... YYYY-MM-DD
-
+### Added by Jiaping Huang 2025-08-30
+phase-1/evidence/*.tmp
+phase-1/evidence/*.log
 
 
 
