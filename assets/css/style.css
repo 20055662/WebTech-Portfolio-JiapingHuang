@@ -39,3 +39,17 @@ article h2 {
 aside {
     display: none;
 }
+
+
+footer {
+    padding: 1rem;
+}
+
+footer nav {
+    display:block;
+
+}
+
+footer nav ul {
+    list-style-type: none;
+}
