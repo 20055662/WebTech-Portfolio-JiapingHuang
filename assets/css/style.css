@@ -1,0 +1,24 @@
+
+header {
+    background-color: none;
+    color: none;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+.header-menu {
+    background-color: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+nav {
+    display: none;
+}
