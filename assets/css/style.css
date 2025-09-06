@@ -3,7 +3,7 @@ header {
     background-color: none;
     color: none;
     padding: 1rem;
-    display: flex;
+    display: block;
     justify-content: space-between;
     align-items: center;
 }
