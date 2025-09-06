@@ -1,7 +1,5 @@
 
 header {
-    background-color: none;
-    color: none;
     padding: 1rem;
     display: flex;
     justify-content: space-between;
@@ -30,10 +28,15 @@ main {
 
 article {
     margin-bottom: 2rem;
+    background: lightgray;
+    border-radius: 5px;
+    padding: 1rem;
+    margin-bottom: 2rem;
 }
 
 article h2 {
     margin-bottom: 0.5rem;
+    font-size: 1.2rem;
 }
 
 aside {
@@ -43,6 +46,7 @@ aside {
 
 footer {
     padding: 1rem;
+    text-align: center;
 }
 
 #footer-nav {
@@ -52,6 +56,8 @@ footer {
 
 #footer-nav ul {
     list-style-type: none;
+    padding: 0;
+    margin: 0;
 }
 
 @media (min-width:960px){
