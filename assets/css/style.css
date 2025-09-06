@@ -95,4 +95,31 @@ footer {
         grid-column: 3;
         grid-row: 1;
     }
+
+    footer {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        padding: 1rem 2rem;
+    }
+
+    footer p{
+        grid-column: 2;
+    }
+
+    #footer-nav ul {
+        grid-column: 3;
+        display: flex;
+        list-style: none;
+        gap: 1rem;
+    }
+
+    #footer-nav ul li {
+        border-right: 1px solid #333;
+        padding-right: 0.5rem;
+    }
+
+    #footer-nav ul li:last-child {
+        border-right: none;
+    }
+
 }
