@@ -11,7 +11,7 @@ header {
 header h1 {
     margin: 0;
 }
-
+ 
 .header-menu {
     background-color: none;
     border: none;
@@ -19,7 +19,7 @@ header h1 {
     cursor: pointer;
 }
 
-nav {
+#header-nav {
     display: none;
 }
 
@@ -45,11 +45,11 @@ footer {
     padding: 1rem;
 }
 
-footer nav {
+#footer-nav {
     display:block;
 
 }
 
-footer nav ul {
+#footer-nav ul {
     list-style-type: none;
 }
