@@ -3,7 +3,7 @@ header {
     background-color: none;
     color: none;
     padding: 1rem;
-    display: block;
+    display: flex;
     justify-content: space-between;
     align-items: center;
 }
@@ -52,4 +52,18 @@ footer {
 
 #footer-nav ul {
     list-style-type: none;
+}
+
+@media (min-width:960px){
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 2rem;
+    }
+
+    .header-menu{
+        display: none;
+    }
+
 }
