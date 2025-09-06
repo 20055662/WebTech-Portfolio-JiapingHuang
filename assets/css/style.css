@@ -77,4 +77,22 @@ footer {
         gap: 1.5rem;  
         padding-left: 20%;
     }
+
+    main{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-row: auto;
+        align-self: center;
+        padding: 2rem;
+    }
+
+    article{
+        grid-template-columns: 1fr 1fr;
+    }
+
+    aside{
+        display: block;
+        grid-column: 3;
+        grid-row: 1;
+    }
 }
