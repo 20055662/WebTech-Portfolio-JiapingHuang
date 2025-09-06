@@ -66,4 +66,15 @@ footer {
         display: none;
     }
 
+    #header-nav {
+        display: flex;
+        padding: 1rem 2rem;
+    }
+
+    #header-nav ul {
+        display: flex;
+        list-style: none;
+        gap: 1.5rem;  
+        padding-left: 20%;
+    }
 }
