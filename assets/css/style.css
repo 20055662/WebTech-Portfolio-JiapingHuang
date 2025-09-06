@@ -22,3 +22,20 @@ header h1 {
 nav {
     display: none;
 }
+
+
+main {
+    padding: 1rem;
+}
+
+article {
+    margin-bottom: 2rem;
+}
+
+article h2 {
+    margin-bottom: 0.5rem;
+}
+
+aside {
+    display: none;
+}
