@@ -59,15 +59,25 @@ footer {
 }
 
 #footer-nav {
-    display:block;
-
+    display: flex;
+    justify-content: center;
 }
 
 #footer-nav ul {
     list-style-type: none;
-    padding: 0;
-    margin: 0;
+    display: flex;
 }
+
+#footer-nav ul li {
+    border-right: 1px solid #333;
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+}
+
+#footer-nav ul li:last-child {
+    border-right: none;
+}
+
 
 @media (min-width:960px){
     #main-header {
@@ -111,6 +121,15 @@ footer {
         margin: 0;
     }
 
+    #header-nav ul li {
+        border-right: 1px solid #333;
+        padding-right: 0.5rem;
+    }
+
+    #header-nav ul li:last-child {
+        border-right: none;
+    }
+
     main{
         display: grid;
         grid-template-columns: 2fr 2fr 1fr;
@@ -151,6 +170,7 @@ footer {
         display: flex;
         list-style: none;
         gap: 1rem;
+        padding-top: 1rem;
     }
 
     #footer-nav ul li {
