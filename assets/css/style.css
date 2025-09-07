@@ -72,9 +72,18 @@ footer {
 @media (min-width:960px){
     #main-header {
         display: flex;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
         justify-content: space-between;
         align-items: center;
         padding: 1rem 2rem;
+        background-color: #fff;
+        border-bottom: 1px solid #333;
+        z-index: 1000;
+        height: 70px;
+
     }
 
     .header-menu{
@@ -82,8 +91,16 @@ footer {
     }
 
     #header-nav {
-        display: flex;
+        display: block;
+        position: fixed;
+        top: 70px;
+        left: 0;
+        right: 0;
         padding: 1rem 2rem;
+        border-bottom: 1px solid #333;
+        background-color: #fff;
+        z-index: 999;
+        height: 60px;
     }
 
     #header-nav ul {
@@ -91,21 +108,24 @@ footer {
         list-style: none;
         gap: 1.5rem;  
         padding-left: 20%;
+        margin: 0;
     }
 
     main{
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-row: auto;
+        grid-template-columns: 2fr 2fr 1fr;
+        grid-template-rows: auto;
+        gap: 2rem;
+        padding: 12rem 2rem 2rem;
     }
 
     article{
-        grid-template-columns: 1fr 1fr;
+        margin-bottom: 2rem;
     }
 
     aside{
         display: block;
-        grid-column: 3;
+        grid-column: 3 ;
         grid-row: 1;
     }
 
@@ -113,6 +133,7 @@ footer {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
         padding: 1rem 2rem;
+        margin-top: 2rem;
     }
 
     #main-footer p{
