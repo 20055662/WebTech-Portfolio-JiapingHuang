@@ -1,8 +1,8 @@
 ### Add your supplemental ignored files below this line
 ### Added by Jiaping Huang 2025-08-30
-phase-1/evidence/*.tmp
-phase-1/evidence/*.log
 
+# Ignore all evidence folders in any phase
+**/evidence/*
 
 
 ### WebStorm force ignore the .idea folder and all its contents
