@@ -63,6 +63,8 @@ aside {
     text-align: center;
     background-color: #FFD0EC;
     color: #1F2544;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 #footer-nav {
@@ -118,6 +120,7 @@ aside {
         padding: 1rem 2rem;
         border-bottom: 1px solid #474F7A ;
         background-color: #FFD0EC;
+        color:#FFFFFF;
         z-index: 999;
         height: 60px;
     }
@@ -153,6 +156,15 @@ aside {
     article{
         margin-bottom: 2rem;
         break-inside: avoid;
+        grid-column: span 1;
+    }
+
+    article:nth-child(odd){
+        grid-column: 1;
+    }
+
+    article:nth-child(even){
+        grid-column: 2;
     }
 
     aside{
@@ -160,10 +172,14 @@ aside {
         flex-direction: column;
         gap: 4rem;
         grid-column: 3;
-        grid-row: 1;
+        grid-row: 1 / span 6;
         border: 5px solid #474F7A ;
         border-radius: 5px;
         padding: 1rem;
+        height: fit-content;
+        position: sticky;
+        top: 130px;
+        
         
     }
 
@@ -181,6 +197,7 @@ aside {
         grid-template-columns: 1fr 1fr 1fr 1fr;
         padding: 1rem 2rem;
         margin-top: 2rem;
+        grid-column: 1/ -1;
     }
 
     #main-footer p{
