@@ -17,10 +17,8 @@
     margin: 0;
     color:#1F2544;
 }
- 
-.header-menu {
-    background: none;
-    border: none;
+
+.header-menu{
     font-size: 1.5rem;
     cursor: pointer;
     color:#1F2544;
@@ -31,6 +29,20 @@
     background-color: #474F7A ;
 }
 
+#header-nav a{
+    color:#FFFFFF;
+    text-decoration: none;
+    display: block;
+    font-size: 2rem;
+
+}
+
+#header-nav a:hover,
+#header-nav a:active{
+    background-color:#FFD0EC;
+    color:#1F2544;
+    border-radius: 4px;
+}
 
 main {
     padding: 6rem 2rem 2rem;
@@ -63,8 +75,6 @@ aside {
     text-align: center;
     background-color: #FFD0EC;
     color: #1F2544;
-    max-width: 1200px;
-    margin: 0 auto;
 }
 
 #footer-nav {
@@ -88,6 +98,19 @@ aside {
     border-right: none;
 }
 
+#footer-nav a{
+    color: #1F2544;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    transition: background 0.3s ease, color 0.3s ease;
+    display: block;
+}
+
+#footer-nav a:hover,
+#footer-nav a:active{
+    background-color: #474F7A;
+    color: #FFD0EC;
+}
 
 @media (min-width:960px){
     #main-header {
@@ -142,6 +165,16 @@ aside {
         border-right: none;
     }
 
+    #header-nav li:last-child{
+        border-right: none;
+    }
+
+    #header-nav a:hover,
+    #header-nav :active{
+        background-color: #e6e6fa;
+        color:#000000;
+    }
+
     main{
         display: grid;
         grid-template-columns: 2fr 2fr 1fr;
@@ -172,7 +205,7 @@ aside {
         flex-direction: column;
         gap: 4rem;
         grid-column: 3;
-        grid-row: 1 / span 6;
+        grid-row: 1 / -1;
         border: 5px solid #474F7A ;
         border-radius: 5px;
         padding: 1rem;
@@ -198,6 +231,7 @@ aside {
         padding: 1rem 2rem;
         margin-top: 2rem;
         grid-column: 1/ -1;
+        align-items: center;
     }
 
     #main-footer p{
@@ -221,6 +255,12 @@ aside {
 
     #footer-nav ul li:last-child {
         border-right: none;
+    }
+
+    #footer-nav a:hover,
+    #footer-nav a:active {
+        background-color: #474F7A;
+        color: #FFD0EC;
     }
 
 }
