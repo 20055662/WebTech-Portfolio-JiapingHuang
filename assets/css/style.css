@@ -278,6 +278,34 @@ aside img{
         color: #FFD0EC;
     }
 
+    #ninja-api-form{
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 2rem;
+        max-width: 800px;
+        padding: 1rem;
+    }
+
+    #ninja-api-form> div{
+        flex: 1;
+        padding: 1rem;
+    }
+
+    #checkboxContainer, #inputContainer{
+        align-items: flex-start;
+    }
+
+    #ninja-api-form botton{
+        align-self:flex-start;
+        margin-top: 1rem;
+    }
+
+    #responseContainer{
+        width: 100%;
+        padding: 1rem;
+        margin-top: 1rem;
+        background-color: #ffffff;
+    }
 }
 
 #api-section{
@@ -349,7 +377,7 @@ aside img{
 
 #ninja-api-form button{
 
-    width: 35%;
+    width: 40%;
     background-color: #474F7A;
     color: #FFD0EC;
     border-radius: 4px;
