@@ -84,19 +84,21 @@
                 <section id="api-section">
                     <h2>Ninja API App</h2>
                     <form id="ninja-api-form">
+                        <div id="checkboxContainer">
                         <p>Pick from the following API's </p>
                         <label><input type="checkbox" name="barcodeApiRoute" value="https://api.api-ninjas.com/v1/barcodegenerate">Barcode Route</label>
                         <label><input type="checkbox" name="validateEmailApiRoute" value="https://api.api-ninjas.com/v1/validateemail?email=info@api-ninjas.com" >Validate Email Route</label>
-                        <br>
+                        </div>
+                        <div id="inputContainer">
                         <input type="text" id="user-input" placeholder="Ender value (text for barcode or email to validate)" required>
-                        <br>
                         <button type="button" id="submitButton">Get Response</button>
-                        <br><br>
-                    </form>
+                        </div>
+                    
                     <div id="responseContainer">Hope you like the result
                         <div id="apiResult"></div>
 
                     </div>
+                    </form>
                 </section>
             </article>
             

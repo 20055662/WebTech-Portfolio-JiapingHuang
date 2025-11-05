@@ -281,59 +281,81 @@ aside img{
 }
 
 #api-section{
-    display: block;
+    display: flex;
+    flex-direction: column;
     align-items:center;
-    min-height: 100vh;
+    justify-content: center;
+    text-align: center;
     padding: 1rem;
 }
 
 /* Ninja API Form Mobile First*/
 #ninja-api-form{
-    background-color: #ffffff;
-    padding:1rem;
-    margin:1rem 0;
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+    padding: 0;
     border-radius: 8px;
-    max-width: 100%;
-    
-}
-
-#ninja-api-form p, h2{
-    font-weight: 600;
-    margin-bottom:  0.75rem;
-    color: #474F7A;
-    display: block;
-    justify-self: center;
-}
-
-#ninja-api-form label{
-    display: inline-box;
-    
-}
-
-#ninja-api-form input[type='text']{
-    display: block;
-    justify-self: center;
+    max-width: 500px;
     width: 100%;
+    gap: 1rem;
+    
+}
+
+#ninja-api-form> div{
+    background-color: #ffffff;
+    width: 100%;
+    border-radius: 2px;
+    padding: 0.5rem;
+    border: 1px solid #474F7A;
+}
+
+#checkboxContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1rem;
+
+}
+
+
+#checkboxContainer label{
+    display: flex;
+    align-self: start;
+    justify-content:center;
+    gap:0.3rem;
+    
+}
+
+#inputContainer{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
     padding:  0.75rem;
+}
+
+#user-input[type='text']{
+
+    align-items: flex-start;
+    width: 100%;
     border: 1px solid #FFD0EC;
     border-radius: 4px;
-    margin: 0.75rem 0;
     font-size: 1rem;
     box-sizing: border-box;
 
 }
 
 #ninja-api-form button{
-    display: block;
-    justify-self: center;
-    width: 30%;
+
+    width: 35%;
     background-color: #474F7A;
     color: #FFD0EC;
     border-radius: 4px;
-    padding: 0.75rem;
     font-size: 1rem;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s ease;
 }
 
 #ninja-api-form button:hover{
@@ -342,14 +364,11 @@ aside img{
 }
 
 #responseContainer{
-    display: block;
-    position: absolute;
-    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background-color: #ffffff;
-    padding: 1rem;
     border-radius: 6px;
     word-wrap: break-word;
     width: 100%;
-
-
 }
