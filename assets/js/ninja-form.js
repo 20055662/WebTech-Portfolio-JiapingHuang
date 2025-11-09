@@ -1,5 +1,5 @@
 // variables
-const barcodeCheckbox = document.querySelector('input[name="barcodeApiRoute"]');
+const passwordCheckbox = document.querySelector('input[name="passwordApiRoute"]');
 const validateCheckbox = document.querySelector('input[name="validateEmailApiRoute"]');
 const userInput = document.getElementById('user-input');
 const submitButton = document.getElementById('submitButton');
@@ -10,13 +10,13 @@ const API_KEY = "ARzAAMIqMnGOJRMOK29ftw==Hs7rW84l2cOIMmgi";
 function checkboxclick(clicked)
 {
     //only one check box can be selected
-    if (clicked === 'barcode')
+    if (clicked === 'password')
         {
             validateCheckbox.checked = false;
         } 
     else if (clicked === 'validate') 
         {
-            barcodeCheckbox.checked = false;
+            passwordCheckbox.checked = false;
         }
 
     //clear input and response
@@ -25,11 +25,11 @@ function checkboxclick(clicked)
 }
 
 // Checkbox events
-barcodeCheckbox.addEventListener
+passwordCheckbox.addEventListener
 (
     'click', function()
     {
-        checkboxclick('barcode');
+        checkboxclick('password');
     }
 );
 
@@ -49,26 +49,37 @@ submitButton.addEventListener
         apiResponse.textContent = '';
         const inputValue = userInput.value.trim();
         //input validation
-        if (!barcodeCheckbox.checked && !validateCheckbox.checked)
+        if (!passwordCheckbox.checked && !validateCheckbox.checked)
             {
                 apiResponse.textContent = 'plese select an API route';
                 return;
             }
         
-        if (!inputValue)
-            {
-                apiResponse.textContent = 'please enter text to generate a barcode or enter an email to check validation.';
-                return;
-            }
 
     //building API URL
     let url = '';
-    if (barcodeCheckbox.checked)
+    if (passwordCheckbox.checked)
         {
-             url = `https://api.api-ninjas.com/v1/barcodegenerate?text=${encodeURIComponent(inputValue)}`;
+            let passwordLength ='';
+            if(inputValue)
+            {
+                const lengthNum =parseInt(inputValue);
+                if (isNaN(lengthNum)|| lengthNum <= 0)
+                {
+                    apiResponse.textContent = 'please enter length of password';
+                    return;
+                }
+                passwordLength = `?length=${lengthNum}`;
+            }
+             url = `https://api.api-ninjas.com/v1/passwordgenerator${passwordLength}`;
         }
     else if (validateCheckbox.checked)
         {
+            if (!inputValue)
+            {
+                apiResponse.textContent = 'please enter an email to check validation';
+                return;
+            }
               url= `https://api.api-ninjas.com/v1/validateemail?email=${encodeURIComponent(inputValue)}`;
         }
 
@@ -96,24 +107,16 @@ submitButton.addEventListener
                         );
                     }   );
                 }
+                return response.json();
         
-            if (barcodeCheckbox.checked)
-                {
-                    return response.blob();
-                }
-            else
-                {
-                    return response.json();
-                }
         }
     )
 
     .then(function (data)
     {
-        if(barcodeCheckbox.checked)
+        if(passwordCheckbox.checked)
         {
-            const imgUrl = URL.createObjectURL(data);
-            apiResponse.innerHTML ='<img src="'+ imgUrl +'" alt="Generate Barcode">';
+            apiResponse.textContent =`Generated Password: ${data.random_password}`;
         }
         else
         {
