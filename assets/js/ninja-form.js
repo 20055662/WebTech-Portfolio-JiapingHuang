@@ -65,11 +65,11 @@ submitButton.addEventListener
     let url = '';
     if (barcodeCheckbox.checked)
         {
-             url = 'https://api.api-ninjas.com/v1/barcodegenerate?text=${encodeURIComponent(inputValue)}';
+             url = `https://api.api-ninjas.com/v1/barcodegenerate?text=${encodeURIComponent(inputValue)}`;
         }
     else if (validateCheckbox.checked)
         {
-              url= 'https://api.api-ninjas.com/v1/validateemail?email=${encodeURIComponent(inputValue)}';
+              url= `https://api.api-ninjas.com/v1/validateemail?email=${encodeURIComponent(inputValue)}`;
         }
 
     //Fetch API data
@@ -103,7 +103,7 @@ submitButton.addEventListener
                 }
             else
                 {
-                    return response.jason();
+                    return response.json();
                 }
         }
     )
