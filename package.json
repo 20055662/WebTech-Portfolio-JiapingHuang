@@ -1,0 +1,26 @@
+{
+  "name": "webtech-portfolio-jiapinghuang",
+  "version": "1.0.0",
+  "description": "| Name        | RGB           | HEX       |\r |-------------|---------------|-----------|\r | Black       | 0, 0, 0       | #000000 |\r | White       | 255, 255, 255 | #FFFFFF |\r | Deep Navy   | 31, 37, 68    | #1F2544 |\r | Slate Blue  | 71, 79, 122   | #474F7A |\r | Lavender    | 230, 230, 250 | #e6e6fa |\r | Pink Glow   | 255, 208, 236 | #FFD0EC |",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/20055662/WebTech-Portfolio-JiapingHuang.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/20055662/WebTech-Portfolio-JiapingHuang/issues"
+  },
+  "homepage": "https://github.com/20055662/WebTech-Portfolio-JiapingHuang#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.4.22",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^3.4.13"
+  }
+}
